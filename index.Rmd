@@ -1,5 +1,5 @@
 ---
-title: "Interactive Maps in R Shiny - googleway"
+title: "Introduction"
 output: html_document
 ---
 
