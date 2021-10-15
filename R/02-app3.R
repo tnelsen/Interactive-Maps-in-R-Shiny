@@ -13,7 +13,7 @@ ui <- fluidPage(
 
 server <- function(input, output){
   
-  map_key <-  "AIzaSyBq-aPhxeywj7F6lW0bQWR1dzgwd3omJ5c"
+  map_key <-  "google_maps_api_key"
   
   output$map <- renderGoogle_map({
     google_map(key = map_key,
