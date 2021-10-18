@@ -48,6 +48,7 @@ In a shiny application like in the [The California Weather Web-Tool](https://sma
 For a full understanding of how shiny applications work and all the different options available to creators there are many good resources.
 
 <a href = "https://shiny.rstudio.com/tutorial/" target="_blank">https://shiny.rstudio.com/tutorial/</a>
+
 <a href = "https://www.r-bloggers.com/2021/04/the-best-resources-for-learning-shiny-app-development/" target="_blank">https://www.r-bloggers.com/2021/04/the-best-resources-for-learning-shiny-app-development/</a>
 
 ## Next steps
