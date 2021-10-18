@@ -13,7 +13,7 @@ ui <- fluidPage(
 
 server <- function(input, output){
   
-  map_key <-  "google_maps_api_key"
+  map_key <-   "google_maps_api_key"
   
   output$map <- renderGoogle_map({
     google_map(key = map_key,
@@ -27,8 +27,21 @@ server <- function(input, output){
       add_polygons(data = shapefile,
                    fill_colour = "fill_color",
                    stroke_colour = "#030303",
-                   update_map_view = FALSE)
+                   update_map_view = FALSE) %>% 
+      add_markers(data = data.frame(lat = 38.533867, lon = -121.771598),
+                  draggable = TRUE, # can the user move the point
+                  update_map_view = FALSE)
   })
+  
+  observeEvent(input$map_marker_drag, {
+    print(input$map_marker_drag)
+  })
+  
+  observeEvent(input$map_polygon_click, {
+    print(input$map_polygon_click$lat)
+    print(input$map_polygon_click$lon)
+  }) 
+  
 }
 
 shinyApp(ui, server)

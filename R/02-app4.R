@@ -27,7 +27,10 @@ server <- function(input, output){
       add_polygons(data = shapefile,
                    fill_colour = "fill_color",
                    stroke_colour = "#030303",
-                   update_map_view = FALSE)
+                   update_map_view = FALSE) %>% 
+      add_markers(data = data.frame(lat = 38.533867, lon = -121.771598),
+                  draggable = TRUE, # can the user move the point
+                  update_map_view = FALSE)
   })
 }
 
