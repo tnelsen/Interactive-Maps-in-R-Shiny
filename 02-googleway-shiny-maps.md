@@ -300,7 +300,7 @@ To update the marker location on user click as well as drag, use `google_map_upd
 
 ## Output the information for the user as text
 
-Note that a desination in the ui function will have to be made as well (see below).
+Note that a destination in the ui function will have to be made as well (see below).
 
 ```
   output$text <- renderText({
@@ -318,7 +318,6 @@ Using a something like `shinydashboard` can help with layout.
 Add an explanation/instructions for the user, a title to show up in the browser tab, and a place for the outputs in the ui function.
 
 ```r
-
 ui <- dashboardPage(
   dashboardHeader(disable = TRUE),
   dashboardSidebar(disable = TRUE),
