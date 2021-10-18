@@ -2,7 +2,7 @@
 
 > ### Learning Objectives
 >
-> * Understand why interactice tools are powerful
+> * Understand why interactive tools are powerful
 > * Understand what pieces are needed for an interactive tool
 > * Understand how R shiny puts the pieces together to form an interactive tool
 
@@ -48,6 +48,7 @@ In a shiny application like in the [The California Weather Web-Tool](https://sma
 For a full understanding of how shiny applications work and all the different options available to creators there are many good resources.
 
 https://shiny.rstudio.com/tutorial/
+
 https://www.r-bloggers.com/2021/04/the-best-resources-for-learning-shiny-app-development/
 
 ## Next steps
