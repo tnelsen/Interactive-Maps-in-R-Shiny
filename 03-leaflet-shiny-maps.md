@@ -312,4 +312,4 @@ title = "Interactive Maps"
 
 ## Resources  
 
-https://rstudio.github.io/leaflet/
+<a href = "https://rstudio.github.io/leaflet/" target="_blank">https://rstudio.github.io/leaflet/</a>

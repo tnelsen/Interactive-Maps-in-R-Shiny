@@ -336,8 +336,7 @@ ui <- dashboardPage(
 
 ## Resources 
 
-https://cran.r-project.org/web/packages/googleway/vignettes/googleway-vignette.html
-
+<a href = "https://cran.r-project.org/web/packages/googleway/vignettes/googleway-vignette.html" target="_blank">https://cran.r-project.org/web/packages/googleway/vignettes/googleway-vignette.html</a>
 
 ## Next steps
 
