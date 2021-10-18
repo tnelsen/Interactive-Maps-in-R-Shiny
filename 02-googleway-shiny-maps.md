@@ -166,8 +166,6 @@ observeEvent(input$map_polygon_click, {
 
 ```
 
-
-
 ## Give feedback to user
 
 In order to give feedback to the user, a place in the ui function must be created to place the outputs. 
@@ -302,13 +300,39 @@ To update the marker location on user click as well as drag, use `google_map_upd
 
 ## Output the information for the user as text
 
-```r
+Note that a desination in the ui function will have to be made as well (see below).
+
+```
   output$text <- renderText({
     
     paste0("Current marker latitide: ", current_markers$lat, " <br> ",
            "Current marker longitude: ", current_markers$lon, " <br> ",
            if_else(!is.na(region_data(shapefile = shapefile, markers = current_markers)$region), "The marker is in an agricultural region of California.", "The marker is NOT in an agricultural region of California."))
     })
+```
+
+## Make the layout user friendly
+
+Using a something like `shinydashboard` can help with layout. 
+
+Add an explanation/instructions for the user, a title to show up in the browser tab, and a place for the outputs in the ui function.
+
+```r
+
+ui <- dashboardPage(
+  dashboardHeader(disable = TRUE),
+  dashboardSidebar(disable = TRUE),
+  dashboardBody(
+  box(width = 6, 
+      p("Click or drag the marker wihtin the state of California to see the marker coordinates (lat/long) and if it is in an agricultural region."),
+      google_mapOutput(outputId = "map")
+      ),
+  box(width = 6,
+      htmlOutput("text")
+      )
+),
+  title = "Interactive Maps"
+)
 ```
 
 ## Resources 
